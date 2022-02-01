@@ -16,9 +16,10 @@ library(wesanderson)
 
 
 
-#===================================#
-## PROPORTIONS of FIBER IDENTITIES ##
-#========================-==========#
+
+# PROPORTION OF FIBER IDENTITIES ------------------------------------------
+
+
 getwd()
 setwd("/Users/aliyacaldwell/Box/Undergraduate Research/Tern microplastics/FTIR/FinalFTIRdata")
 setwd("C:/Users/aec1075/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRdata")
@@ -147,9 +148,10 @@ ggplot(dfsummary5)+
         panel.grid.major=element_blank(), panel.grid.minor=element_blank())+
   scale_fill_poke(pokemon="surskit", spread=11)
 
-#===============================#
-## PROPORTIONS of FIBER COLORS ##
-#===============================#
+
+# PROPORTIONS OF FIBER COLORS ---------------------------------------------
+
+
 getwd()
 setwd("/Users/aliyacaldwell/Box/Undergraduate Research/Tern microplastics/FTIR/FinalFTIRdata")
 setwd("C:/Users/aec1075/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRdata")
@@ -174,9 +176,9 @@ dfsummaryanthro<-dfsummaryanthro %>%
   dplyr::mutate(prop=n/sum(n))
 
 
-#===============#
-## FIBER SIZES ##
-#===============#
+
+# FIBER SIZES -------------------------------------------------------------
+
 
 df1feces<-subset(df1, SampleType=="feces")
 
@@ -275,9 +277,10 @@ ggplot(df1allCOTENH,aes(x=ParticleSizemm,fill=Age,colour=Age))+
   scale_x_continuous(expand = c(0, 0), limits = c(0, 7)) + 
   scale_y_continuous(expand = c(0, 0), limits = c(0, .5))
 
-##=====================================================================##
-## same stats as i did for my thesis but with updated numbers from FTIR ##
-##=====================================================================##
+
+
+
+# STATS ON DATA CORRECTED USING FTIR RESULTS ------------------------------
 
 
 getwd()
@@ -286,9 +289,9 @@ setwd("C:/Users/aec1075/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRda
 
 df<-read.csv("fecalFTIRsamples.csv",fileEncoding="UTF-8-BOM")
 
-#=============================================#
-## DO ADULTS AND CHICKS VARY IN SHIT WEIGHT? ##
-#=============================================#
+
+# DO ADULTS AND CHICKS VARY IN SHIT WEIGHT? -------------------------------
+
 
 dfecal<-subset(df, SampleType=="fecal"& Species=="COTE"&CollectionState=="NH")
 wilcox.test(dfecal$SampleMassGrams~dfecal$Age)
