@@ -20,9 +20,7 @@ library(wesanderson)
 # PROPORTION OF FIBER IDENTITIES ------------------------------------------
 
 
-getwd()
-setwd("/Users/aliyacaldwell/Box/Undergraduate Research/Tern microplastics/FTIR/FinalFTIRdata")
-setwd("C:/Users/aec1075/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRdata")
+setwd("")
 
 df1<-read.csv("allFTIRsamples.csv",fileEncoding="UTF-8-BOM")
 
@@ -153,8 +151,7 @@ ggplot(dfsummary5)+
 
 
 getwd()
-setwd("/Users/aliyacaldwell/Box/Undergraduate Research/Tern microplastics/FTIR/FinalFTIRdata")
-setwd("C:/Users/aec1075/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRdata")
+setwd("")
 
 df1<-read.csv("allFTIRsamples.csv",fileEncoding="UTF-8-BOM")
 
@@ -284,8 +281,7 @@ ggplot(df1allCOTENH,aes(x=ParticleSizemm,fill=Age,colour=Age))+
 
 
 getwd()
-setwd("/Users/aliyacaldwell/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRdata")
-setwd("C:/Users/aec1075/Box/Pre PhD Research/Tern microplastics/FTIR/FinalFTIRdata")
+setwd("")
 
 df<-read.csv("fecalFTIRsamples.csv",fileEncoding="UTF-8-BOM")
 
